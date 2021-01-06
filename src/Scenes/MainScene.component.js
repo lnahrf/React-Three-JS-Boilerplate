@@ -22,13 +22,13 @@ export default class MainScene extends React.Component {
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         this.renderer.setPixelRatio(window.devicePixelRatio);
         this.renderer.autoClear = false;
-        this.renderer.setClearColor(new THREE.Color(0xffffff));
+        this.renderer.setClearColor(new THREE.Color(0x222222));
         this.renderer.setSize(this.divRef.current.offsetWidth, this.divRef.current.offsetHeight);
         this.divRef.current.appendChild(this.renderer.domElement);
 
         //init Scene
         this.scene = new THREE.Scene();
-        this.scene.background = new THREE.Color(0xffffff);
+        this.scene.background = new THREE.Color(0x222222);
         
         //init Camera
         this.camera = new THREE.PerspectiveCamera(30, this.divRef.current.offsetWidth / this.divRef.current.offsetHeight, 0.1, 1000); 
