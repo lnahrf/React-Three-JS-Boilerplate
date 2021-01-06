@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import metalTexture from './../../Assets/Textures/metal_texture.jpg';
 
-export default class MetallicBall {
+export default class MetalSpshere{
     create = () => {
         let geometry = new THREE.SphereGeometry(5, 30, 30);
         let texture = new THREE.TextureLoader().load(metalTexture);

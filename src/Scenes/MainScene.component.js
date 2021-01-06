@@ -1,6 +1,6 @@
 import React from 'react';
 import * as THREE from 'three';
-import MetallicBall from './../Components/3D/MetallicBall.three';
+import MetalSphere from '../Components/3D/MetalSphere.three';
 
 export default class MainScene extends React.Component {
     constructor() {
@@ -35,8 +35,8 @@ export default class MainScene extends React.Component {
         this.camera.position.z = 50;
 
         //Metallic Ball
-        let metallicBall = new MetallicBall().create();
-        this.scene.add(metallicBall);
+        let sphere = new MetalSphere().create();
+        this.scene.add(sphere);
 
         //Ambient Light
         let ambientLight = new THREE.AmbientLight(0x07215c);
@@ -53,11 +53,11 @@ export default class MainScene extends React.Component {
         const animate = () => {
             requestAnimationFrame(animate);
             this.renderer.render(this.scene, this.camera);
-            if(metallicBall){
+            if(sphere){
                 let rotationRad = THREE.MathUtils.degToRad(.1);
-                metallicBall.rotateY(rotationRad);
-                metallicBall.rotateX(rotationRad);
-                metallicBall.rotateZ(rotationRad);
+                sphere.rotateY(rotationRad);
+                sphere.rotateX(rotationRad);
+                sphere.rotateZ(rotationRad);
             }
           
         }
