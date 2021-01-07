@@ -37,6 +37,7 @@ The boilerplate's folder structure follows the basic CRA template structure with
 >   - Components ```- Store all your React/3D components (that aren't scenes).```
 >   - Scenes ```- Store all your scenes React components. ```
 >   - Styles ```- Store all your CSS/SASS files. ```
+>   - Utils ```- Store all your globally used functions (e.g sceneResize.js)```
 >   - App.js
 >   - index.js
 
@@ -58,8 +59,8 @@ To modify the actual loading screen, edit the ***Loading.component.js*** in ```s
 
 ---
 ## Update - 1.2
-Added handle window resize functionality..
-To add this functionality to other scenes, import handleResize from ```src/Utils/screenResize.js ```.
+Added handle window resizing functionality. <br>
+To add this functionality to other scenes, import handleResize from ```src/Utils/sceneResize.js ```.
 ```javascript
 import {handleSceneResize, initEventListener} from './../Utils/sceneResize';
 ```
@@ -74,7 +75,7 @@ initEventListener(window);
 ***<span style="color:orange">renderer*** refers to the current renderer instance. <br>
 ***<span style="color:orange">composer*** (optional) refers to the current composer instance. <br>
 
-To modify how Three JS scenes handle window resizing, edit the ***sceneResize.js*** file in ```src/Utils/screenResize.js ```
+To modify how Three JS scenes handle window resizing, edit the ***sceneResize.js*** file in ```src/Utils/sceneResize.js ```
 
 ---
 If you have any questions or comments, feel free to contact me!
