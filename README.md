@@ -41,7 +41,7 @@ The boilerplate's folder structure follows the basic CRA template structure with
 >   - index.js
 
 
-
+---
 ## Update - 1.1 
 Added a loading manager functionality to the MainScene component. <br>
 Turn loading mode on using loading props, e.g.
@@ -56,4 +56,25 @@ export default class App extends React.Component{
 ```
 To modify the actual loading screen, edit the ***Loading.component.js*** in ```src/Components``` and ***loading.css*** in ```src/Styles```.
 
+---
+## Update - 1.2
+Added handle window resize functionality..
+To add this functionality to other scenes, import handleResize from ```src/Utils/screenResize.js ```.
+```javascript
+import {handleSceneResize, initEventListener} from './../Utils/sceneResize';
+```
+Add this code before the animation loop of every scene to handle window resizing.
+```javascript
+//init Handle Resize
+handleSceneResize(window, camera, renderer, composer);
+initEventListener(window);
+```
+***<span style="color:orange">window</span>*** refers to the global window object. <br>
+***<span style="color:orange">camera*** refers to the camera the scene currently uses. <br>
+***<span style="color:orange">renderer*** refers to the current renderer instance. <br>
+***<span style="color:orange">composer*** (optional) refers to the current composer instance. <br>
+
+To modify how Three JS scenes handle window resizing, edit the ***sceneResize.js*** file in ```src/Utils/screenResize.js ```
+
+---
 If you have any questions or comments, feel free to contact me!

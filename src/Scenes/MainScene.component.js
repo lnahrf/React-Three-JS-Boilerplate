@@ -2,6 +2,7 @@ import React from 'react';
 import * as THREE from 'three';
 import MetalSphere from '../Components/3D/MetalSphere.three';
 import Loading from './../Components/Loading.component';
+import {handleSceneResize, initEventListener} from './../Utils/sceneResize';
 export default class MainScene extends React.Component {
     constructor(props) {
         super(props);
@@ -57,6 +58,10 @@ export default class MainScene extends React.Component {
         directionalLight.position.set(1, 0, 5);
         this.scene.add(directionalLight);
 
+        //init Handle Resize
+        handleSceneResize(window, this.camera, this.renderer)
+        initEventListener(window);
+        
         //Animation Loop
         const animate = () => {
             requestAnimationFrame(animate);
