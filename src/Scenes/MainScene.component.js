@@ -2,7 +2,8 @@ import React from 'react';
 import * as THREE from 'three';
 import MetalSphere from '../Components/3D/MetalSphere.three';
 import Loading from './../Components/Loading.component';
-import {handleSceneResize, initEventListener} from './../Utils/sceneResize';
+import { handleSceneResize, initEventListener } from './../Utils/sceneResize';
+
 export default class MainScene extends React.Component {
     constructor(props) {
         super(props);
@@ -23,8 +24,8 @@ export default class MainScene extends React.Component {
     initScene = () => {
         //init Loading Manager
         const loadingManager = new THREE.LoadingManager();
-        loadingManager.onLoad = () =>{
-            this.setState({loading: false}, ()=>{})
+        loadingManager.onLoad = () => {
+            this.setState({ loading: false }, () => { })
         }
 
         //init Renderer
@@ -43,7 +44,7 @@ export default class MainScene extends React.Component {
         this.camera = new THREE.PerspectiveCamera(30, this.divRef.current.offsetWidth / this.divRef.current.offsetHeight, 0.1, 1000);
         this.camera.position.z = 50;
 
-        //Metallic Ball
+        //Metal Sphere
         let sphere = new MetalSphere().create(loadingManager);
         this.scene.add(sphere);
 
@@ -61,7 +62,7 @@ export default class MainScene extends React.Component {
         //init Handle Resize
         handleSceneResize(window, this.camera, this.renderer)
         initEventListener(window);
-        
+
         //Animation Loop
         const animate = () => {
             requestAnimationFrame(animate);
@@ -79,8 +80,8 @@ export default class MainScene extends React.Component {
 
     render() {
         return (<>
-        <div className="three-container" ref={this.divRef}></div>
-        {this.state.loading ? <Loading/>  :''}
+            <div className="three-container" ref={this.divRef}></div>
+            {this.state.loading ? <Loading /> : ''}
         </>)
 
     }
