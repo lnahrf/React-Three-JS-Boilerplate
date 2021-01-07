@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# React JS + Three JS Boilerplate <img src="https://theconsoleblog.com/wp-content/uploads/2021/01/three-js-symbol-png.png" width="35" align="right" href="#"/>  <img src="https://theconsoleblog.com/wp-content/uploads/2020/12/1280px-React-icon-e1609508110908.png" width="35" align="right" href="#"/>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The first time I tried running a Three JS Scene on a React project I encountered a couple of problems until I eventually got the shtick of it, I hope this article and repository will save some developers a couple of precious hours.
 
-## Available Scripts
+You can either clone my boilerplate and start working from there or you can follow my guide on how to start a basic React + Three project from scratch.
 
-In the project directory, you can run:
+[Read the complete walkthrough and explanation of this boilerplate on The Console Blog&nbsp;&nbsp;
+<img src="https://theconsoleblog.com/wp-content/uploads/2021/01/the_console_blog_logo.png" width="120"/>
+](https://theconsoleblog.com/react-js-three-js-boilerplate/)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Like it and want to support me? [<img src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cbee341ae2b8813ae072f5b_Ko-fi_logo_RGB_Outline.png" width="20"/> Buy me a coffee!](https://ko-fi.com/theconsoleblog)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+# Using the boilerplate
+ **Step 1** Clone the repo 
+ ```
+ git clone https://github.com/tk-ni/React-JS-Three-JS-Boilerplate.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Step 2** In the main repo directory open a CMD/Terminal and type in these commands.
 
-### `npm run build`
+```
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The boilerplate includes a basic project structure and basic scene <i>**MainScene.component.js**</i> already imported in App.js.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Feel free to modify/copy/replace the MainScene component or anything else to fit your project's needs.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The boilerplate's folder structure follows the basic CRA template structure with a few modifications.
 
-### `npm run eject`
+> - public <br>
+> - src
+>   - Assets ```- Store all your 3D Models/Textures/Graphics.```
+>   - Scenes ```- Store all your scenes React components. ```
+>   - Styles ```- Store all your CSS/SASS files. ```
+>   - App.js
+>   - index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you have any questions or comments, feel free to contact me!

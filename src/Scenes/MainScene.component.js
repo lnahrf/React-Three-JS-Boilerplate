@@ -1,11 +1,14 @@
 import React from 'react';
 import * as THREE from 'three';
 import MetalSphere from '../Components/3D/MetalSphere.three';
-
+import Loading from './../Components/Loading.component';
 export default class MainScene extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
+        this.state = {
+            loading: this.props.loading ? true : false,
+        }
         //3D Scene components
         this.divRef = React.createRef();
         this.renderer = null;
@@ -17,6 +20,11 @@ export default class MainScene extends React.Component {
         this.initScene();
     }
     initScene = () => {
+        //init Loading Manager
+        const loadingManager = new THREE.LoadingManager();
+        loadingManager.onLoad = () =>{
+            this.setState({loading: false}, ()=>{})
+        }
 
         //init Renderer
         this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -29,13 +37,13 @@ export default class MainScene extends React.Component {
         //init Scene
         this.scene = new THREE.Scene();
         this.scene.background = new THREE.Color(0x222222);
-        
+
         //init Camera
-        this.camera = new THREE.PerspectiveCamera(30, this.divRef.current.offsetWidth / this.divRef.current.offsetHeight, 0.1, 1000); 
+        this.camera = new THREE.PerspectiveCamera(30, this.divRef.current.offsetWidth / this.divRef.current.offsetHeight, 0.1, 1000);
         this.camera.position.z = 50;
 
         //Metallic Ball
-        let sphere = new MetalSphere().create();
+        let sphere = new MetalSphere().create(loadingManager);
         this.scene.add(sphere);
 
         //Ambient Light
@@ -45,26 +53,28 @@ export default class MainScene extends React.Component {
         this.scene.add(ambientLight);
 
         //Directional Light
-        let directionalLight = new THREE.DirectionalLight(0xe8f7ff,1);
-        directionalLight.position.set(1,0,5);
+        let directionalLight = new THREE.DirectionalLight(0xe8f7ff, 1);
+        directionalLight.position.set(1, 0, 5);
         this.scene.add(directionalLight);
 
         //Animation Loop
         const animate = () => {
             requestAnimationFrame(animate);
             this.renderer.render(this.scene, this.camera);
-            if(sphere){
+            if (sphere) {
                 let rotationRad = THREE.MathUtils.degToRad(.1);
                 sphere.rotateY(rotationRad);
                 sphere.rotateX(rotationRad);
                 sphere.rotateZ(rotationRad);
             }
-          
+
         }
         animate();
     }
 
     render() {
-        return (<div className="three-container" ref={this.divRef}></div>)
+        return (<><div className="three-container" ref={this.divRef}></div>
+        {this.state.loading ? <Loading/>  :''}</>)
+
     }
 }

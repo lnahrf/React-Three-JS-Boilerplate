@@ -5,7 +5,7 @@ import './Styles/main.css';
 export default class App extends React.Component{
   render(){
     return(<>
-    <MainScene/>
+    <MainScene loading={true}/>
     </>)
   }
 }
