@@ -34,6 +34,7 @@ The boilerplate's folder structure follows the basic CRA template structure with
 > - public <br>
 > - src
 >   - Assets ```- Store all your 3D Models/Textures/Graphics.```
+>   - Components ```- Store all your React/3D components (that aren't scenes).```
 >   - Scenes ```- Store all your scenes React components. ```
 >   - Styles ```- Store all your CSS/SASS files. ```
 >   - App.js
