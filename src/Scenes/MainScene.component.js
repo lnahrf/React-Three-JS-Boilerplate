@@ -73,8 +73,10 @@ export default class MainScene extends React.Component {
     }
 
     render() {
-        return (<><div className="three-container" ref={this.divRef}></div>
-        {this.state.loading ? <Loading/>  :''}</>)
+        return (<>
+        <div className="three-container" ref={this.divRef}></div>
+        {this.state.loading ? <Loading/>  :''}
+        </>)
 
     }
 }

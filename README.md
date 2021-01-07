@@ -39,4 +39,20 @@ The boilerplate's folder structure follows the basic CRA template structure with
 >   - App.js
 >   - index.js
 
+
+
+## Update - 1.1 
+Added a loading manager functionality to the MainScene component. <br>
+Turn loading mode on using loading props, e.g.
+```jsx
+export default class App extends React.Component{
+  render(){
+    return(<>
+    <MainScene loading={true}/>
+    </>)
+  }
+}
+```
+To modify the actual loading screen, edit the ***Loading.component.js*** in src/Components and ***loading.css*** in src/Styles.
+
 If you have any questions or comments, feel free to contact me!
