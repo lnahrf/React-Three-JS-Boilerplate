@@ -54,6 +54,6 @@ export default class App extends React.Component{
   }
 }
 ```
-To modify the actual loading screen, edit the ***Loading.component.js*** in src/Components and ***loading.css*** in src/Styles.
+To modify the actual loading screen, edit the ***Loading.component.js*** in ```src/Components``` and ***loading.css*** in ```src/Styles```.
 
 If you have any questions or comments, feel free to contact me!
