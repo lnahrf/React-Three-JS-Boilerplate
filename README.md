@@ -1,4 +1,4 @@
-# React JS + Three JS Boilerplate <img src="https://theconsoleblog.com/wp-content/uploads/2021/01/three-js-symbol-png.png" width="35" align="right" href="#"/>  <img src="https://theconsoleblog.com/wp-content/uploads/2020/12/1280px-React-icon-e1609508110908.png" width="35" align="right" href="#"/>
+# React + Three JS Boilerplate <img src="https://theconsoleblog.com/wp-content/uploads/2021/01/three-js-symbol-png.png" width="35" align="right" href="#"/>  <img src="https://theconsoleblog.com/wp-content/uploads/2020/12/1280px-React-icon-e1609508110908.png" width="35" align="right" href="#"/>
 
 The first time I tried running a Three JS Scene on a React project I encountered a couple of problems until I eventually got the shtick of it, I hope this article and repository will save some developers a couple of precious hours.
 
