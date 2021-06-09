@@ -4,12 +4,7 @@ The first time I tried running a Three JS Scene on a React project I encountered
 
 You can either clone my boilerplate and start working from there or you can follow my guide on how to start a basic React + Three project from scratch.
 
-[Read the complete walkthrough and explanation of this boilerplate on The Console Blog&nbsp;&nbsp;
-<img src="https://theconsoleblog.com/wp-content/uploads/2021/01/the_console_blog_logo.png" width="120"/>
-](https://theconsoleblog.com/react-js-three-js-boilerplate/)
-
-
-Like it and want to support me? [<img src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cbee341ae2b8813ae072f5b_Ko-fi_logo_RGB_Outline.png" width="20"/> Buy me a coffee!](https://ko-fi.com/theconsoleblog)
+Like it and want to support me? [<img src="https://uploads-ssl.webflow.com/5c14e387dab576fe667689cf/5cbee341ae2b8813ae072f5b_Ko-fi_logo_RGB_Outline.png" width="20"/> Buy me a coffee!](https://ko-fi.com/tk_ni)
 
 
 # Using the boilerplate
