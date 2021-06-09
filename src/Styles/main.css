@@ -7,3 +7,8 @@
     z-index: 0;
 }
 
+.three-container canvas{
+    width: 100% !important;
+    height:auto !important;
+}
+

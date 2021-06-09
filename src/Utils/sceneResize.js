@@ -1,4 +1,4 @@
-export const handleSceneResize = (window, camera, renderer,composer) =>{
+export const handleSceneResize = (camera, renderer,composer) =>{
     //Resize renderer
     if (renderer && window && camera) {
         camera.aspect = window.innerWidth / window.innerHeight;
@@ -14,7 +14,7 @@ export const handleSceneResize = (window, camera, renderer,composer) =>{
 
 }
 
-export const initEventListener = (window) =>{
+export const initEventListener = () =>{
         //Add event listener to window object
         if(window){
             window.addEventListener('resize', handleSceneResize);

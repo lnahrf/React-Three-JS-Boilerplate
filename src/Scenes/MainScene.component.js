@@ -60,8 +60,8 @@ export default class MainScene extends React.Component {
         this.scene.add(directionalLight);
 
         //init Handle Resize
-        handleSceneResize(window, this.camera, this.renderer)
-        initEventListener(window);
+        handleSceneResize(this.camera, this.renderer)
+        initEventListener();
 
         //Animation Loop
         const animate = () => {
