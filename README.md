@@ -20,7 +20,7 @@ npm install
 npm start
 ```
 
-The boilerplate includes a basic project structure and basic scene <i>**MainScene.component.js**</i> already imported in App.js.
+The boilerplate includes a basic **CRA** project structure and basic scene <i>**MainScene.component.js**</i> already imported in App.js.
 
 Feel free to modify/copy/replace the MainScene component or anything else to fit your project's needs.
 
